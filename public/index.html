@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cash Machine</title>
+  <link rel="stylesheet" href="./bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+  <script src="./jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+  <div class="card-holder">
+    <div class="card">
+      <div class="card-body">
+        <h1 class="text-center heading">Cash Machine</h1>
+        <div class="form-group">
+          <label>Enter amount to withdraw</label>
+          <input type="number" class="form-control" name="amount" id="amount">
+        </div>
+        <button class="btn btn-primary btn-block" id="withdraw-button">Withdraw Cash</button>
+        <div id="cash-box">
+          <div class="row">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./app.js"></script>
+</body>
+
+</html>
