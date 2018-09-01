@@ -10,7 +10,6 @@ const helper = {
         let tmpAmount = 0;
         let keepChecking = true;
         let largestPossibleNote;
-        console.log("Entered Amount: ",amount)
         /* Check if number is undefined/NULL throw error*/
         if (!targetAmount) {
             return { success: true, statusCode: 200, notes: []};
