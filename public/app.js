@@ -1,3 +1,5 @@
+const API_URL = window.location.origin;
+
 $("#withdraw-button").click(function(){
 	console.log($('#amount').val());
 	let cashBox = $('#cash-box .row');
@@ -6,7 +8,7 @@ $("#withdraw-button").click(function(){
 
     $.ajax({
     	type: 'POST',
-    	url: "http://localhost:8000/withdraw",
+    	url: `${API_URL}/withdraw`,
     	contentType: 'application/json',
     	data: JSON.stringify({ "amount": $('#amount').val() }),
     	success: function(resp){

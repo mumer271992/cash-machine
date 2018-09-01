@@ -3,6 +3,8 @@ const bodyParser     = require('body-parser');
 var serveStatic      = require('serve-static');
 const app            = express();
 const helper    = require('./helper.js');
+require('dotenv').config();
+
 app.use(bodyParser.json())
 app.use(serveStatic(__dirname + "/public"));
 
@@ -19,4 +21,5 @@ app.post('/withdraw', (req, res) => {
 const port = 8000;
 app.listen(port, () => {
   console.log('We are live on ' + port);
+  console.log("ENV: ", process.env.API_URL);
 });

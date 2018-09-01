@@ -4,11 +4,9 @@ var chaiHttp = require('chai-http');
 var expect = require('chai').expect;
 var should = require('chai').should();
 chai.use(chaiHttp);
+require('dotenv').config();
 
-// If we have multiple build environment then we can use
-//  .env file for urls according to environment
-
-const API_URL = 'http://localhost:8000'; 
+const API_URL = process.env.API_URL //'http://localhost:8000'; 
 
 describe('Test cases for Available notes', function (){
 	it('Test case for valid amount expecting multiple notes', function(done){
