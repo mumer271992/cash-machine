@@ -1,54 +1,44 @@
-# Timetracking Frontend
+# Cash Machine
 
-![Vue Badge Version 2.5.2](https://img.shields.io/badge/vue-2.5.2-green.svg)
+> A small program which returns number of notes equal to user entered amount.
 
-> Timetracking Frontend Project written in Vue.js
+## How to run API and frontend app
 
-## Build Setup
+After cloning this repo
+```
+cd cash-machine
+npm install
 
-Important changes to default webpack project:
-- Added Maven configuration with Maven frontend plugin to enable maven builds of the project
-- Moved output directory from /dist to /target/dist to fit maven project setup
-- Maven build output will be packaged in a jar file to be used in other modules
-- Moved test output directories to target/reports
-
+```
 ---
+Now you can test application running on port 8000
+To see frontend application open following url in your browser
+[http://localhost:8000/](http://localhost:8000/)
 
 
-### Maven Commands
-``` bash
-# clear target folder
-mvn clean
+If you want to test cash machine functionality directly you can use an api end point like follow
+http://localhost:8000/withdraw
+This is post method which accepts input as a json like 
+input:
 
-# Download yarn and node if not found and build the project
-mvn install
+{
+amount: 80
+}
 
-# Run unit tests
-mvn test
+and return output as a json object like follow
+
+output: 
+
+{
+	success: true
+	statusCode: 200,
+	notes: [10, 20, 50]
+}
+
+## Run Test cases
+``` 
+npm run test
+
 ```
 
 ---
-
-### YARN Commands
-``` bash
-# install dependencies
-yarn install
-
-# serve with hot reload at localhost:8080
-yarn run dev
-
-# build for production with minification
-yarn run build
-
-# build for production and view the bundle analyzer report
-yarn run build --report
-
-# run unit tests
-yarn run unit
-
-# run e2e tests
-yarn run e2e
-
-# run all tests
-yarn test
-```
